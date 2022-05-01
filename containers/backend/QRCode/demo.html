@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <h2>qrcode.js</h2>
+    <div id="qrcode"></div>
+    <script type="text/javascript" src="qrcode.js"></script>
+    <script type="text/javascript">
+      //Type 1
+      // normal QRcode style 
+    new QRCode(document.getElementById("qrcode"), "https://www.bing.com");
+
+      // Type 2
+      // QRcode with colored background
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "https://www.bing.com",
+        width: 128,
+        height: 128,
+        colorDark: "#f60",
+        colorLight: "#ccc",
+        correctLevel: 0 // the complexity of QRcode (0-3)
+    });
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

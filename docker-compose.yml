@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  frontend:
+    build: ./containers/frontend
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./containers/frontend:/frontend
+      - /frontend/node_modules
+    ports:
+      - 3000:3000
+    command: npm start
+
+
+  backend:
+    build: ./containers/backend
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./containers/backend:/backend
+      - /backend/node_modules
+    ports:
+      - 8080:8080
+

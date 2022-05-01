@@ -1,0 +1,39 @@
+{
+	"name": "mezzuzot-project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"dev": "node app.js",
+		"test": "jest --testTimeout=10000"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"collectCoverage": true,
+		"coveragePathIgnorePatterns": [
+			"/node_modules/"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Mezzuzot-Project/Backend.git"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.904.0",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"jest": "^26.6.3",
+		"morgan": "^1.10.0",
+		"qs": "^6.10.1"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Mezzuzot-Project/Backend/issues"
+	},
+	"homepage": "https://github.com/Mezzuzot-Project/Backend#readme",
+	"devDependencies": {
+		"supertest": "^6.1.3"
+	}
+}
